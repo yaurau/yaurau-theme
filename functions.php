@@ -115,7 +115,7 @@ function yaurau_theme_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'yaurau_theme_widgets_init' );
-
+//////////////////////////////////////////////////////////////////////////////////////
 /**
  * Enqueue scripts and styles.
  */
@@ -146,11 +146,23 @@ function yaurau_edit_admin_menus() {
 add_action( 'admin_menu', 'yaurau_edit_admin_menus' );
 
 /**
- * Remove Emoji icons
+ * Remove action
  */
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action( 'wp_head', 'wp_generator' );
+remove_action( 'wp_head', 'wlwmanifest_link' );
+remove_action( 'wp_head', 'rsd_link' );
+remove_action('wp_head', 'wp_shortlink_wp_head');
+remove_action('wp_head','rel_canonical');
+remove_action('wp_head','adjacent_posts_rel_link_wp_head');
+remove_action('wp_head','feed_links_extra', 3);
+remove_action('xmlrpc_rsd_apis', 'rest_output_rsd');
+remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
+remove_action('wp_head', 'feed_links', 2);
 
+
+////////////////////////////////////////////////////////////////////////////////////////
 /**
  * Implement the Custom Header feature.
  */
