@@ -160,6 +160,8 @@ remove_action('wp_head','feed_links_extra', 3);
 remove_action('xmlrpc_rsd_apis', 'rest_output_rsd');
 remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
 remove_action('wp_head', 'feed_links', 2);
+add_filter( 'show_recent_comments_widget_style', '__return_false', 99 );
+add_filter('show_admin_bar', '__return_false');
 
 
 ////////////////////////////////////////////////////////////////////////////////////////
