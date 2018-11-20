@@ -120,6 +120,10 @@ add_action( 'widgets_init', 'yaurau_theme_widgets_init' );
  * Enqueue scripts and styles.
  */
 function yaurau_theme_scripts() {
+
+    wp_register_style('yaurau-theme-style-bootstrape', get_template_directory_uri(). '/bootstrap.css');
+    wp_enqueue_style('yaurau-theme-style-bootstrape');
+
 	wp_enqueue_style( 'yaurau-theme-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'yaurau-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -131,6 +135,21 @@ function yaurau_theme_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'yaurau_theme_scripts' );
+
+/**
+ * Edit admin menu.
+ */
+function yaurau_edit_admin_menus() {
+    global $menu;
+    $menu[20][0] = 'Landing page'; // Изменить комментарии на отзывы
+}
+add_action( 'admin_menu', 'yaurau_edit_admin_menus' );
+
+/**
+ * Remove Emoji icons
+ */
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
 
 /**
  * Implement the Custom Header feature.
