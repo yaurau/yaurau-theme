@@ -124,11 +124,18 @@ function yaurau_theme_scripts() {
     wp_register_style('yaurau-theme-style-bootstrape', get_template_directory_uri(). '/bootstrap.css');
     wp_enqueue_style('yaurau-theme-style-bootstrape');
 
+    wp_register_style('yaurau-theme-style-uikit', get_template_directory_uri(). '/uikit.css');
+    wp_enqueue_style('yaurau-theme-style-uikit');
+
+
 	wp_enqueue_style( 'yaurau-theme-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'yaurau-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'yaurau-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+
+    wp_register_script('yaurau-theme-script-uikit', get_template_directory_uri(). '/uikit.js');
+    wp_enqueue_script('yaurau-theme-script-uikit');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -163,6 +170,19 @@ remove_action('wp_head', 'feed_links', 2);
 add_filter( 'show_recent_comments_widget_style', '__return_false', 99 );
 add_filter('show_admin_bar', '__return_false');
 
+function disable_visual_editor()
+{
+    global $post;
+
+    /*
+     * Отключить визуальный редактор WordPress для всех страниц (т.е. для всех постов с типом "страница")
+     */
+    $post_type = get_post_type($post);
+    if ($post_type == 'page') {
+        return false;
+    }
+}
+add_filter('user_can_richedit', 'disable_visual_editor');
 
 ////////////////////////////////////////////////////////////////////////////////////////
 /**
