@@ -12,11 +12,11 @@
  */
 function yaurau_theme_scripts() {
 
-    wp_register_style('yaurau-theme-style-bootstrape', get_template_directory_uri(). '/assets/bootstrap/bootstrap.css');
+    wp_register_style('yaurau-theme-style-bootstrape', get_template_directory_uri(). '/css/bootstrap.min.css');
     wp_enqueue_style('yaurau-theme-style-bootstrape');
 
-    wp_register_style('yaurau-theme-style-uikit', get_template_directory_uri(). '/assets/uikit/uikit.css');
-    wp_enqueue_style('yaurau-theme-style-uikit');
+    wp_register_style('yaurau-theme-style-css-mdb', get_template_directory_uri(). '/css/mdb.min.css');
+    wp_enqueue_style('yaurau-theme-style-mdb');
 
 
 	wp_enqueue_style( 'yaurau-theme-style', get_stylesheet_uri() );
@@ -25,11 +25,14 @@ function yaurau_theme_scripts() {
 
 	wp_enqueue_script( 'yaurau-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-    wp_register_script('yaurau-theme-script-uikit', get_template_directory_uri(). '/assets/uikit/uikit.js');
-    wp_enqueue_script('yaurau-theme-script-uikit');
+    wp_register_script('yaurau-theme-script-popper', get_template_directory_uri(). '/js/popper.min.js',array(), false, true);
+    wp_enqueue_script('yaurau-theme-script-popper');
 
-    wp_register_script('yaurau-theme-script-bootstrap', get_template_directory_uri(). '/assets/bootstrap/bootstrap.js',array(), false, true);
+    wp_register_script('yaurau-theme-script-bootstrap', get_template_directory_uri(). '/js/bootstrap.min.js',array(), false, true);
     wp_enqueue_script('yaurau-theme-script-bootstrap');
+
+    wp_register_script('yaurau-theme-script-mdb', get_template_directory_uri(). '/js/mdb.min.js',array(), false, true);
+    wp_enqueue_script('yaurau-theme-script-mdb');
 }
 add_action( 'wp_enqueue_scripts', 'yaurau_theme_scripts' );
 
@@ -38,7 +41,7 @@ add_action( 'wp_enqueue_scripts', 'yaurau_theme_scripts' );
  */
 function yaurau_edit_admin_menus() {
     global $menu;
-    $menu[20][0] = 'Landing page'; // Изменить комментарии на отзывы
+    $menu[20][0] = 'Landing page';
 }
 add_action( 'admin_menu', 'yaurau_edit_admin_menus' );
 
