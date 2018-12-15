@@ -18,8 +18,19 @@ function yaurau_theme_scripts() {
     wp_register_style('yaurau-theme-style-mdb', get_template_directory_uri(). '/css/mdb.min.css');
     wp_enqueue_style('yaurau-theme-style-mdb');
 
-    wp_register_style('yaurau-theme-style-css', get_template_directory_uri(). '/css/style.css');
-    wp_enqueue_style('yaurau-theme-style-css');
+    wp_register_style('yaurau-theme-style-time', get_template_directory_uri(). '/countdown/css/style.css');
+    wp_enqueue_style('yaurau-theme-style-time');
+
+    wp_register_style('yaurau-theme-style-menu', get_template_directory_uri(). '/css/menu.css');
+    wp_enqueue_style('yaurau-theme-style-menu');
+
+    wp_register_style('yaurau-theme-style-gallery', get_template_directory_uri(). '/gallery/css/gallery.css');
+    wp_enqueue_style('yaurau-theme-style-gallery');
+
+    wp_enqueue_style( 'yaurau-theme-style', get_stylesheet_uri() );
+
+    wp_register_script('yaurau-theme-script-jquery', get_template_directory_uri(). '/js/jquery-3.3.1.min.js');
+    wp_enqueue_script('yaurau-theme-script-jquery');
 
 	wp_register_script('yaurau-theme-script-popper', get_template_directory_uri(). '/js/popper.min.js',array(), false, true);
     wp_enqueue_script('yaurau-theme-script-popper');
@@ -29,6 +40,16 @@ function yaurau_theme_scripts() {
 
     wp_register_script('yaurau-theme-script-mdb', get_template_directory_uri(). '/js/mdb.min.js',array(), false, true);
     wp_enqueue_script('yaurau-theme-script-mdb');
+
+    wp_register_script('yaurau-theme-script-time', get_template_directory_uri(). '/countdown/js/countdown.js',array(), false, true);
+    wp_enqueue_script('yaurau-theme-script-time');
+
+    wp_register_script('yaurau-theme-script-gallery', get_template_directory_uri(). '/gallery/js/gallery.js',array(), false, true);
+    wp_enqueue_script('yaurau-theme-script-gallery');
+
+    wp_register_script('yaurau-theme-script-menu', get_template_directory_uri(). '/js/menu.js',array(), false, true);
+    wp_enqueue_script('yaurau-theme-script-menu');
+
 }
 add_action( 'wp_enqueue_scripts', 'yaurau_theme_scripts' );
 
