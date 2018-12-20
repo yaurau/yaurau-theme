@@ -80,15 +80,6 @@ nav{display:block;
     display: block;
 }
 @media screen and (max-width: 1199px){
-    .remove__phone {
-        position:absolute;
-        top:-9999px;
-    }
-    .button__mobile {
-        padding-left: 140px;
-    }
-}
-@media screen and (max-width: 999px) {
     .menu__icon{
         display: inline-block;
         padding-top: 7px;
@@ -116,5 +107,11 @@ nav{display:block;
     .remove {
         position:absolute;
         top:-9999px;
+    }
+}
+@media screen and (max-width: 991px){
+    .remove__phone {
+        position: absolute;
+        top: -9999px;
     }
 }
