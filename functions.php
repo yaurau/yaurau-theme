@@ -21,8 +21,8 @@ function yaurau_theme_scripts() {
     wp_register_style('yaurau-theme-style-time', get_template_directory_uri(). '/countdown/css/style.css');
     wp_enqueue_style('yaurau-theme-style-time');
 
-    wp_register_style('yaurau-theme-style-menu', get_template_directory_uri(). '/css/menu.css');
-    wp_enqueue_style('yaurau-theme-style-menu');
+    wp_register_style('yaurau-theme-style-yaurau', get_template_directory_uri(). '/css/yaurau.css');
+    wp_enqueue_style('yaurau-theme-style-yaurau');
 
     wp_register_style('yaurau-theme-style-gallery', get_template_directory_uri(). '/gallery/css/gallery.css');
     wp_enqueue_style('yaurau-theme-style-gallery');
@@ -49,6 +49,9 @@ function yaurau_theme_scripts() {
 
     wp_register_script('yaurau-theme-script-menu', get_template_directory_uri(). '/js/menu.js',array(), false, true);
     wp_enqueue_script('yaurau-theme-script-menu');
+
+    wp_register_script('yaurau-theme-script-yaurau', get_template_directory_uri(). '/js/yaurau.js',array(), false, true);
+    wp_enqueue_script('yaurau-theme-script-yaurau');
 
 }
 add_action( 'wp_enqueue_scripts', 'yaurau_theme_scripts' );
