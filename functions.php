@@ -52,10 +52,6 @@ function yaurau_theme_scripts() {
 
     wp_register_script('yaurau-theme-script-yaurau', get_template_directory_uri(). '/js/yaurau.js',array(), false, true);
     wp_enqueue_script('yaurau-theme-script-yaurau');
-
-    wp_register_script('yaurau-theme-parallax', get_template_directory_uri(). '/js/parallax.min.js',array(), false, true);
-    wp_enqueue_script('yaurau-theme-parallax');
-
 }
 add_action( 'wp_enqueue_scripts', 'yaurau_theme_scripts' );
 
