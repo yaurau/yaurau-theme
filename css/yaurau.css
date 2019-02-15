@@ -1,16 +1,12 @@
 /*  Styles of the Yaurau Theme */
-
-
 /* Menu */
-
-nav{display:block;
-  background:#ffffff;
+nav {
+  display: block;
+  background: #ffffff;
 }
-
 .menu {
   text-align: left;
 }
-
 .menu__icon {
   display: none;
   width: 45px;
@@ -19,7 +15,6 @@ nav{display:block;
   cursor: pointer;
   margin-top: 6px;
 }
-
 .menu__icon span {
   display: block;
   position: absolute;
@@ -30,21 +25,18 @@ nav{display:block;
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
-  transition: .25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
-
 .menu__icon span:nth-child(1) {
   top: 0px;
 }
-
-.menu__icon span:nth-child(2), .menu__icon span:nth-child(3) {
+.menu__icon span:nth-child(2),
+.menu__icon span:nth-child(3) {
   top: 13px;
 }
-
 .menu__icon span:nth-child(4) {
   top: 26px;
 }
-
 .menu__links-item {
   display: inline-block;
   color: #000000;
@@ -55,42 +47,34 @@ nav{display:block;
   text-transform: uppercase;
   text-decoration: none;
 }
-
 .menu__links-item:hover {
   text-decoration: none;
-
 }
-
 .menu.menu_state_open .menu__icon span:nth-child(1) {
   top: 18px;
   width: 0%;
   left: 50%;
 }
-
 .menu.menu_state_open .menu__icon span:nth-child(2) {
   transform: rotate(45deg);
 }
-
-.menu.menu_state_open  .menu__icon span:nth-child(3) {
+.menu.menu_state_open .menu__icon span:nth-child(3) {
   transform: rotate(-45deg);
 }
-
-.menu.menu_state_open  .menu__icon span:nth-child(4) {
+.menu.menu_state_open .menu__icon span:nth-child(4) {
   top: 18px;
   width: 0%;
   left: 50%;
 }
-
 .menu.menu_state_open .menu__links {
   display: block;
 }
-@media screen and (max-width: 1199px){
-  .menu__icon{
+@media screen and (max-width: 1199px) {
+  .menu__icon {
     display: inline-block;
     padding-top: 7px;
     padding-bottom: 7px;
   }
-
   .menu__links {
     position: fixed;
     display: none;
@@ -102,7 +86,6 @@ nav{display:block;
     z-index: 1000;
     overflow: hidden;
   }
-
   .menu__links-item {
     display: block;
     padding: 10px 0;
@@ -110,12 +93,11 @@ nav{display:block;
     color: #ffffff;
   }
   .remove {
-    position:absolute;
-    top:-9999px;
+    position: absolute;
+    top: -9999px;
   }
 }
 /*Loader*/
-
 .yaurau__loader {
   background: none repeat scroll 0 0 #ffffff;
   bottom: 0;
@@ -127,7 +109,6 @@ nav{display:block;
   width: 100%;
   z-index: 9999;
 }
-
 .loader__inner {
   background-image: url("../img/load.gif");
   background-size: cover;
@@ -142,27 +123,21 @@ nav{display:block;
   top: 50%;
   position: absolute;
 }
-
 .margin__bottom {
   margin-bottom: 40px;
 }
-
 /* The parallax scrolling effect */
-
 .parallax {
   /* The image used */
   background-image: url(http://ravtovich.by/wp-content/uploads/2019/01/bg.jpg);
-
   /* Full height */
   height: 100%;
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 @media screen and (max-width: 450px) {
   .remove__timer {
     position: absolute;

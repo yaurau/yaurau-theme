@@ -41,10 +41,10 @@ function yaurau_theme_scripts() {
     wp_register_script('yaurau-theme-script-mdb', get_template_directory_uri(). '/js/mdb.min.js',array(), false, true);
     wp_enqueue_script('yaurau-theme-script-mdb');
 
-    wp_register_script('yaurau-theme-script-time', get_template_directory_uri(). '/countdown/js/countdown.js',array(), false, true);
+    wp_register_script('yaurau-theme-script-time', get_template_directory_uri(). 'components/countdown/js/countdown.js',array(), false, true);
     wp_enqueue_script('yaurau-theme-script-time');
 
-    wp_register_script('yaurau-theme-script-gallery', get_template_directory_uri(). '/gallery/js/gallery.js',array(), false, true);
+    wp_register_script('yaurau-theme-script-gallery', get_template_directory_uri(). 'components/gallery/js/gallery.js',array(), false, true);
     wp_enqueue_script('yaurau-theme-script-gallery');
 
     wp_register_script('yaurau-theme-script-menu', get_template_directory_uri(). '/js/menu.js',array(), false, true);
