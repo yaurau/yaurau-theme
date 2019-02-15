@@ -11,15 +11,13 @@
 
 ?>
 	</div><!-- #content -->
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-				<?php
-				/* translators: 1: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'yaurau-theme' ), 'yaurau-theme', '<a href="https://github.com/yaurau">Rauvtovich Yauhen</a>' );
-				?>
-
-        </div><!-- .site-info -->
-	</footer><!-- #colophon -->
+    <section id="footer" class="footer">
+        <div class="container">
+            <div>
+                 Theme: yaurau-theme by <a href="https://github.com/yaurau"> Rauvtovich Yauhen </a>
+            </div>
+    </div>
+    </section>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
