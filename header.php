@@ -35,24 +35,6 @@
     <meta name="twitter:image:src" content="https://ravtovich.by/wp-content/uploads/2019/01/open-graph.jpg">
     <meta name="twitter:url" content="https://ravtovich.by">
     <meta name="twitter:domain" content="ravtovich.by">
-    <meta name="yandex-verification" content="3bc167ce13b9a15e" />
-
-    <!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-   ym(51606710, "init", {
-        id:51606710,
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/51606710" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
