@@ -16,11 +16,10 @@ const jsFiles = [
     './js/**/*.js'
 ];
 const cssFiles = [
-    '.node_modules/normalize.css/normalize.css',
     './css/**/*.css'
 ];
 
-function styles() {
+function themeStyles() {
     return gulp.src(cssFiles)
         .pipe(concat('yaurau_theme.css'))
         .pipe(autoprefixer({
@@ -30,6 +29,17 @@ function styles() {
         .pipe(gulp.dest('./css'));
 }
 
+
+function styles() {
+    return gulp.src('./style_theme.css')
+        .pipe(concat('./style.css'))
+        .pipe(autoprefixer({
+            browsers:[' >0.1% '],
+            cascade: false
+        }))
+        .pipe(gulp.dest('./'));
+}
+
 function script() {
     return gulp.src(jsFiles)
         .pipe(concat('yaurau_theme.js'))
@@ -37,11 +47,7 @@ function script() {
 
 }
 
-function watch() {
-    gulp.watch('./src/css/**/*.css');
-    gulp.watch('./src/js/**/*.js');
-}
-
+gulp.task('themeStyles', themeStyles);
 gulp.task('styles', styles);
 gulp.task('script', script);
-gulp.task('watch', watch);
+
