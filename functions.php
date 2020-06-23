@@ -5,46 +5,61 @@
  */
 function yaurau_theme_scripts() {
 
-    wp_register_style('yaurau-theme-style-bootstrape', get_template_directory_uri(). '/css/bootstrap.min.css');
-    wp_enqueue_style('yaurau-theme-style-bootstrape');
 
-    wp_register_style('yaurau-theme-style-mdb', get_template_directory_uri(). '/css/mdb.min.css');
-    wp_enqueue_style('yaurau-theme-style-mdb');
 
-    wp_register_style('yaurau-theme-style-time', get_template_directory_uri(). '/countdown/css/style.css');
-    wp_enqueue_style('yaurau-theme-style-time');
+//    wp_register_style('yaurau-theme-style-style_theme', get_template_directory_uri(). '/app/css/style_theme.css');
+//    wp_enqueue_style('yaurau-theme-style-style_theme');
 
-//    wp_register_style('yaurau-theme-style-yaurau', get_template_directory_uri(). '/css/yaurau_theme.css');
+    wp_register_style('yaurau-theme-style-style_theme', get_template_directory_uri(). '/style_theme.css');
+    wp_enqueue_style('yaurau-theme-style-style_theme');
+
+
+
+//    wp_register_style('yaurau-theme-style-mdb', get_template_directory_uri(). '/app/css/mdb.min.css');
+//    wp_enqueue_style('yaurau-theme-style-mdb');
+//
+//    wp_register_style('yaurau-theme-style-bootstrape', get_template_directory_uri(). '/app/css/bootstrap.min.css');
+//    wp_enqueue_style('yaurau-theme-style-bootstrape');
+
+//    wp_register_style('yaurau-theme-style-time', get_template_directory_uri(). '/app/countdown/css/style.css');
+//    wp_enqueue_style('yaurau-theme-style-time');
+
+//    wp_register_style('yaurau-theme-style-yaurau', get_template_directory_uri(). '/app/css/yaurau_theme.css');
 //    wp_enqueue_style('yaurau-theme-style-yaurau');
 
-    wp_register_style('yaurau-theme-style-gallery', get_template_directory_uri(). '/gallery/css/gallery.css');
-    wp_enqueue_style('yaurau-theme-style-gallery');
+//    wp_register_style('yaurau-theme-style-gallery', get_template_directory_uri(). '/app/gallery/css/gallery.css');
+//    wp_enqueue_style('yaurau-theme-style-gallery');
 
     wp_enqueue_style( 'yaurau-theme-style', get_stylesheet_uri() );
 
-    wp_register_script('yaurau-theme-script-jquery', get_template_directory_uri(). '/js/jquery-3.3.1.min.js');
-    wp_enqueue_script('yaurau-theme-script-jquery');
+    wp_register_script('yaurau-theme-script-landing', get_template_directory_uri(). '/js/landing.js',array(), false, true);
+    wp_enqueue_script('yaurau-theme-script-landing');
 
-    wp_register_script('yaurau-theme-script-popper', get_template_directory_uri(). '/js/popper.min.js',array(), false, true);
-    wp_enqueue_script('yaurau-theme-script-popper');
+//    wp_register_script('yaurau-theme-script-jquery', get_template_directory_uri(). '/app/js/jquery-3.3.1.min.js');
+//    wp_enqueue_script('yaurau-theme-script-jquery');
+//
+////    wp_register_script('yaurau-theme-script-popper', get_template_directory_uri(). '/js/popper.min.js',array(), false, true);
+////    wp_enqueue_script('yaurau-theme-script-popper');
+//
+//    wp_register_script('yaurau-theme-script-theme', get_template_directory_uri(). '/app/js/script__theme.js',array(), false, true);
+//    wp_enqueue_script('yaurau-theme-script-theme');
+//
+//
+//    wp_register_script('yaurau-theme-script-bootstrap', get_template_directory_uri(). '/app/js/bootstrap.min.js',array(), false, true);
+//    wp_enqueue_script('yaurau-theme-script-bootstrap');
+//
+//    wp_register_script('yaurau-theme-script-mdb', get_template_directory_uri(). '/app/js/mdb.min.js',array(), false, true);
+//    wp_enqueue_script('yaurau-theme-script-mdb');
 
-    wp_register_script('yaurau-theme-script-bootstrap', get_template_directory_uri(). '/js/bootstrap.min.js',array(), false, true);
-    wp_enqueue_script('yaurau-theme-script-bootstrap');
+//    wp_register_script('yaurau-theme-script-time', get_template_directory_uri(). 'components/countdown/js/countdown.js',array(), false, true);
+//    wp_enqueue_script('yaurau-theme-script-time');
 
-    wp_register_script('yaurau-theme-script-mdb', get_template_directory_uri(). '/js/mdb.min.js',array(), false, true);
-    wp_enqueue_script('yaurau-theme-script-mdb');
+//    wp_register_script('yaurau-theme-script-gallery', get_template_directory_uri(). 'components/gallery/js/gallery.js',array(), false, true);
+//    wp_enqueue_script('yaurau-theme-script-gallery');
 
-    wp_register_script('yaurau-theme-script-time', get_template_directory_uri(). 'components/countdown/js/countdown.js',array(), false, true);
-    wp_enqueue_script('yaurau-theme-script-time');
-
-    wp_register_script('yaurau-theme-script-gallery', get_template_directory_uri(). 'components/gallery/js/gallery.js',array(), false, true);
-    wp_enqueue_script('yaurau-theme-script-gallery');
-
-    wp_register_script('yaurau-theme-script-yaurau', get_template_directory_uri(). '/js/yaurau.js',array(), false, true);
-    wp_enqueue_script('yaurau-theme-script-yaurau');
-
-//    wp_register_script('yaurau-theme-script-yaurau', get_template_directory_uri(). '/js/yaurau_theme.js',array(), false, true);
+//    wp_register_script('yaurau-theme-script-yaurau', get_template_directory_uri(). '/app/js/yaurau__theme.js',array(), false, true);
 //    wp_enqueue_script('yaurau-theme-script-yaurau');
+
 }
 add_action( 'wp_enqueue_scripts', 'yaurau_theme_scripts' );
 
@@ -74,6 +89,12 @@ remove_action( 'wp_head', 'wp_oembed_add_discovery_links' );
 remove_action('wp_head', 'feed_links', 2);
 add_filter( 'show_recent_comments_widget_style', '__return_false', 99 );
 add_filter('show_admin_bar', '__return_false');
+remove_action( 'wp_head', 'rest_output_link_wp_head' );
+add_filter('wpcf7_autop_or_not', '__return_false');
+
+
+
+
 
 /*
  * Disable the WordPress visual editor for all pages
