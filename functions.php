@@ -90,10 +90,12 @@ remove_action('wp_head', 'feed_links', 2);
 add_filter( 'show_recent_comments_widget_style', '__return_false', 99 );
 add_filter('show_admin_bar', '__return_false');
 remove_action( 'wp_head', 'rest_output_link_wp_head' );
+
+/*
+ * Disable the elements Contact Form 7
+ */
+
 add_filter('wpcf7_autop_or_not', '__return_false');
-
-
-
 
 
 /*
