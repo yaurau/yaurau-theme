@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="theme_copyright">
-                        Theme: yaurau-theme by <a href="https://github.com/yaurau"> Rauvtovich Yauhen </a>
+                        Theme: yaurau-theme by <a href="https://github.com/yrauvtovich"> Yauhen Rauvtovich  </a>
                     </div>
                 </div>
             </div>
