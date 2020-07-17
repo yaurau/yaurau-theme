@@ -8,7 +8,8 @@ function yaurau_theme_scripts() {
 //    wp_register_style('yaurau-theme-style-style_theme', get_template_directory_uri(). '/app/css/style_theme.css');
 //    wp_enqueue_style('yaurau-theme-style-style_theme');
 
-
+    wp_register_style('yaurau-theme-style-style_theme', get_template_directory_uri(). '/style_theme.css');
+    wp_enqueue_style('yaurau-theme-style-style_theme');
 
 //    wp_register_style('yaurau-theme-style-mdb', get_template_directory_uri(). '/app/css/mdb.min.css');
 //    wp_enqueue_style('yaurau-theme-style-mdb');
